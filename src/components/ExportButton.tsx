@@ -11,7 +11,7 @@ interface ExportButtonProps {
 export default function ExportButton({ 
   onClick, 
   hasCalculation = false,
-  className = \"\" 
+  className = ""
 }: ExportButtonProps) {
   const mobile = isMobile();
   
@@ -31,25 +31,25 @@ export default function ExportButton({
         `}
       >
         {mobile ? (
-          <Share2 className=\"w-5 h-5\" />
+          <Share2 className="w-5 h-5" />
         ) : (
-          <Printer className=\"w-5 h-5\" />
+          <Printer className="w-5 h-5" />
         )}
-        <span className=\"hidden sm:inline\">
+        <span className="hidden sm:inline">
           {hasCalculation ? 'Print/Export Documentation' : 'Print/Export Report'}
         </span>
-        <span className=\"sm:hidden\">
+        <span className="sm:hidden">
           {hasCalculation ? 'Export Results' : 'Export Report'}
         </span>
       </button>
-      <p className=\"text-sm text-gray-400 mt-2\">
-        <span className=\"hidden sm:inline\">
+      <p className="text-sm text-gray-400 mt-2">
+        <span className="hidden sm:inline">
           {hasCalculation 
             ? 'Generate complete grant calculation proof' 
             : 'Generate timestamped price documentation'
           }
         </span>
-        <span className=\"sm:hidden\">
+        <span className="sm:hidden">
           Multiple export options available
         </span>
       </p>
