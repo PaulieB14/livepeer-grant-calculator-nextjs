@@ -40,6 +40,8 @@ jobs:
           # Automatically inject basePath in your Next.js configuration file and disable
           # server side image optimization (so it can work with static export).
           static_site_generator: next
+          # Enable Pages if not already enabled
+          enablement: true
           
       - name: Restore cache
         uses: actions/cache@v3
