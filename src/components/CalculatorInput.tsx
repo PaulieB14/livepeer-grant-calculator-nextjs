@@ -12,7 +12,7 @@ interface CalculatorInputProps {
 export default function CalculatorInput({ 
   value, 
   onChange, 
-  placeholder = \"Enter USD amount (e.g., 10000)\",
+  placeholder = "Enter USD amount (e.g., 10000)",
   disabled = false 
 }: CalculatorInputProps) {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -30,15 +30,15 @@ export default function CalculatorInput({
 
   return (
     <div>
-      <label className=\"block text-lg font-semibold text-white mb-3\">
+      <label className="block text-lg font-semibold text-white mb-3">
         Grant Amount (USD)
       </label>
-      <div className=\"relative group\">
-        <div className=\"absolute left-4 top-1/2 transform -translate-y-1/2 z-10\">
-          <DollarSign className=\"w-6 h-6 text-gray-400 group-focus-within:text-green-400 transition-colors\" />
+      <div className="relative group">
+        <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
+          <DollarSign className="w-6 h-6 text-gray-400 group-focus-within:text-green-400 transition-colors" />
         </div>
         <input
-          type=\"text\"
+          type="text"
           value={value}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
@@ -55,9 +55,9 @@ export default function CalculatorInput({
             ${disabled ? '' : 'group-hover:bg-white/10'}
           `}
         />
-        <div className=\"absolute inset-0 rounded-2xl bg-gradient-to-r from-green-500/0 to-blue-500/0 group-focus-within:from-green-500/5 group-focus-within:to-blue-500/5 transition-all duration-200 pointer-events-none\" />
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-500/0 to-blue-500/0 group-focus-within:from-green-500/5 group-focus-within:to-blue-500/5 transition-all duration-200 pointer-events-none" />
       </div>
-      <p className=\"text-sm text-gray-400 mt-2\">
+      <p className="text-sm text-gray-400 mt-2">
         Enter the USD amount you need for your grant proposal
       </p>
     </div>
