@@ -25,9 +25,9 @@ export default function StatusIndicator({ priceData, className }: StatusIndicato
   return (
     <div className={cn('flex items-center justify-center gap-2', className)}>
       <div className={cn('w-2 h-2 rounded-full animate-pulse', getStatusColor())} />
-      <span className=\"text-sm text-gray-500\">{getStatusText()}</span>
+      <span className="text-sm text-gray-500">{getStatusText()}</span>
       {lastUpdated && !loading && (
-        <span className=\"text-xs text-gray-600 ml-2\">
+        <span className="text-xs text-gray-600 ml-2">
           Updated {lastUpdated.toLocaleTimeString()}
         </span>
       )}
